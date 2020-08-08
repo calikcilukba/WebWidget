@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css');
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#myBtn {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+#widget {
+    height: 45px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 2;
+}
+
+#widget:hover,
+#widget:focus {
+    cursor: pointer;
+}
+
+#myModal {
+    height: 420px;
+    width: 300px;
+    border: 10px grey;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* animation: fadein 1s; */
+    z-index: 1;
+}
+
+.modal-content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: white;
+    position: relative;
+    width: 100%;
+    max-height: 70%;
+    height: 100%;
+}
+.modal-content-login {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    max-height: 80%;
+    height: 100%;
+}
+
+.header {
+    background-color: #f1efff;
+    margin: auto;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Modal Content */
+
+#modalimage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.582);
+    z-index: 3;
+    border-radius: 10px;
+    display: none;
+}
+
+.content-login {
+    font-size: 13px;
+    display: block;
+    border-radius: 10px;
+    height: 290px;
+    background-color: #f1efff;
+    width: 220px;
+    position: relative;
+    margin:auto; 
+    /* bottom: 10px; */
+    top: 15px;
+    box-shadow: 0px 9px 14px -6px rgba(0, 0, 0, 0.45);
+    /* z-index: 400; */
+}
+
+.myLogin {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.myLogin .row {
+    margin-top: -15px;
+}
+
+#warn1 {
+    margin: auto;
+}
+
+#warn2 {
+    margin: auto;
+}
+
+#submitlogin {
+    margin-top: 8px;
+}
+
+.header-login .myLogin .row {
+    margin-top: -30px;
+}
+
+.content-isi {
+    left: 25px;
+    width: 80%;
+}
+
+#firsttgl {
+    width: 100%;
+    height: 100%;
+}
+
+.contentimage {
+    display: block;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 90%;
+    left: 15px;
+    top: 20px;
+    position: absolute;
+    box-shadow: 0px 9px 14px -6px rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+    z-index: 4;
+}
+
+.header-image {
+    position: absolute;
+    border-radius: 10px 10px 0 0;
+    color: #48328F;
+    font-size: 15px;
+    top: 0px;
+    width: 100%;
+    height: 35px;
+    background-color: #f1efff;
+    z-index: 6;
+}
+
+.sendingimage {
+    max-width: 110px;
+    max-height: 110px;
+    width: auto;
+    height: auto;
+    border-radius: 5px
+}
+
+#uploader {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    margin: auto;
+    /* margin-left: 5px; */
+}
+
+.sendingimage:hover,
+.sendingimage:focus {
+    cursor: pointer;
+}
+
+.image-preview__image {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    position: flex;
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.preview {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: red; */
+}
+.loadingImage{
+    position: absolute;
+    bottom:30px;
+    display: none;
+}
+
+.loadingFile{
+    position: absolute;
+    top: 52px;
+    display: none;
+}
+.toast-success{
+    background-color: #48328F;
+    opacity: 0.5;
+    border-radius: 5%;
+    color: white;
+}
+#toast-container {
+    top: auto !important;
+    left: auto !important;
+    bottom: 56%;
+    right:110px;  
+}
+#caption {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+#box {
+    position: relative;
+    border-radius: 5px;
+    width: 90%;
+    height: 60%;
+    top: 13%;
+    margin: auto;
+    z-index: 5;
+}
+
+#caption {
+    font-size: 15px;
+}
+
+.send {
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #f1efff;
+    z-index: 6;
+}
+
+#sendimage {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: #48328F;
+}
+
+#sendimage:hover,
+#sendimage:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container-fluid {
+    width: 100%;
+    font-size: 11px;
+    position: absolute;
+    overflow: hidden;
+    padding: 30px 0px;
+}
+
+.message {
+    padding: 3px 0px;
+    height: auto;
+    max-height: 100px;
+    width: 100%;
+    box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2), 0 0px 15px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    bottom: 0px;
+    position: absolute;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+}
+
+.fl1,.fl2..fl3,.fl4 {
+    flex: 0 20px;
+}
+
+#textarea1 {
+    flex: 1;
+    -webkit-box-flex: 1;
+    resize: none;
+    overflow-x: hidden;
+    max-height: 90px;
+}
+
+#terima-warna {
+    max-width: 140px;
+    background-color: #F1EFFF;
+    border-radius: 0px 15px 15px 15px;
+    padding: 5px 10px;
+    font-style: poppins;
+    position: static;
+    text-align: left;
+    word-break: break-word;
+    width: 100%;
+}
+
+#terima-warna-file {
+    max-width: 140px;
+    background-color: #F1EFFF;
+    border-radius: 0px 15px 15px 15px;
+    padding: 5px 10px;
+    font-style: poppins;
+    position: relative;
+    text-align: left;
+    word-break: break-word;
+    width: 100%;
+}
+
+.overlay{
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(145, 145, 145);
+    opacity: 0;
+    font-color:white;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+    transition: .5s ease;
+}
+
+.overlay #iconDownloads p{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+}
+
+.overlay p{
+    color: white;
+}
+
+.overlay-kirim{
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(145, 145, 145);
+    opacity: 0;
+    font-color:white;
+    text-align: center;
+    border-radius: 15px 0px 15px 15px;
+    transition: .5s ease;
+}
+
+.overlay-kirim #iconDownloads p{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+}
+
+.overlay-kirim p{
+    color: white;
+}
+
+#terima-warna-file:hover .overlay {
+    opacity: 1;
+}
+
+#kirim-warna-file:hover .overlay-kirim {
+    opacity: 1;
+}
+
+#iconDownloads{
+    color: #dfd6fd;'
+    font-size: 4rem;
+}
+
+#kirim-warna {
+    position: static;
+    background-color: #dfd6fd;
+    border-radius: 15px 0 15px 15px;
+    max-width: 150px;
+    padding: 5px 10px;
+    font-style: poppins;
+    /* text-align: left; */
+    word-break: break-word;
+    width: auto;
+    min-width: 80px;
+}
+
+#kirim-warna-file {
+    position: relative;
+    background-color: #dfd6fd;
+    border-radius: 15px 0 15px 15px;
+    max-width: 150px;
+    padding: 5px 10px;
+    font-style: poppins;
+    /* text-align: left; */
+    word-break: break-word;
+    width: auto;
+    min-width: 80px;
+}
+
+#file {
+    display: none;
+}
+
+#fileDoc {
+    display: none;
+}
+#in_image_file {
+    font-size: 24px;
+    color: #48328F;
+    transform: rotate(45deg); /* Equal to rotateZ(45deg) */
+}
+#in_image_file:hover,
+#in_image_file:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#in_image {
+    font-size: 24px;
+    color: #48328F;
+}
+
+#in_image:hover,
+#in_image:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Iphone 6,7,8,se2020 */
+
+@media only screen and (max-width: 414px),
+screen and (max-height: 736px) {
+    #widget {
+        width: 40px;
+        height: 40px;
+    }
+    #myModal {
+        height: 420px;
+        width: 280px;
+        display: none;
+        bottom: 65px;
+        right: 20px;
+    }
+}
+
+
+/* Iphone 5/se */
+
+@media only screen and (max-width: 320px),
+screen and (max-height: 568px) {
+    #widget {
+        width: 40px;
+        height: 40px;
+    }
+    #myModal {
+        height: 420px;
+        width: 280px;
+        display: none;
+        bottom: 65px;
+        right: 20px;
+    }
+}
+
+.terima {
+    font-size: 10px;
+    float: left;
+    width: 100%;
+}
+
+.kirim {
+
+    font-size: 10px;
+    position: relative;
+    float: right;
+    right: 0px;
+}
+
+
+.terima1 {
+    font-size: 10px;
+    float: left;
+    width: 100%;
+    z-index: 2;
+}
+
+.terima1-file {
+    font-size: 10px;
+    float: left;
+    width: 100%;
+}
+
+.kirim1 {
+    margin: 5px 0px;
+    font-size: 10px;
+    position: relative;
+    float: right;
+}
+
+.tgl {
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+    z-index: 0;
+}
+
+.tgl .row{
+    height: 0px;
+    margin: 20px;
+}
+
+.tgl .row .col {
+    margin: 5px 0px 30px 15px;
+    font-weight: 700;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    width: 200px;
+    color: #48328F;
+    text-align: center;
+    background-color: #f1efff;
+    border-radius: 20px;
+    color: black;
+
+}
+
+.tgl1 {
+    position: relative;
+    margin: auto;
+    left: 45px;
+    display: block;
+    text-align: center;
+    margin: 5px 0px 30px 0px;
+}
+
+.tgl1 .row .col {
+    font-weight: 700;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    width: 200px;
+    color: #48328F;
+    text-align: center;
+    background-color: #f1efff;
+    border-radius: 20px;
+    color: black;
+}
+
+#console {
+    width: 100%;
+}
+
+.top {
+    top: -10px;
+}
+
+.bottom {
+    bottom: -10px;
+}
+
+.left {
+    left: -10px;
+}
+
+.right {
+    right: -10px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.baris2 {
+    margin-top: -30px;
+}
+
+#jamkirim {
+    font-size: 8px;
+    position: relative;
+    bottom: 0px;
+}
+
+#jamterima {
+    font-size: 8px;
+    position: relative;
+    /* bottom: 0px; */
+}
+
+#ava {
+    width: 130px;
+}
+
+button {
+    text-decoration: none;
+}
+
+#bintik {
+    width: 20px;
+    /* margin: auto; */
+    margin: 0 47%;
+}
+
+#bintik:hover,
+#bintik:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image {
+    width: 32px;
+    height: 32px;
+    border-radius: 30px;
+    /* color: white; */
+}
+
+.avatar-user {
+    width: 26.6667px;
+    height: 26.6667px;
+    border-radius: 30px;
+    background-color: #48328F;
+    text-align: center; 
+    position: relative;
+}
+.avatar-user span{
+    padding: 70px 0;
+}
+.avatar-user-text {
+    color: #f1efff;
+    font-size: 15px;
+
+}
+
+.image p {
+    color: white;
+}
+
+.centang {
+    font-size: 15px;
+    color: grey;
+}
+
+.centang_done {
+    font-size: 15px;
+    color: #4fc3f7;
+}
+
+#sendmes {
+    color: #48328F;
+    float: right;
+}
+
+#sendmes:hover,
+#sendmes:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: grey;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close-image {
+    color: #aaaaaa;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.close-image:hover,
+.close-image:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.badges-nontification{
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    right: 15px;
+    z-index: 20;
+    display: none;
+}
+.captionFile{
+    padding: 0px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sizeIconFile{
+    font-size: 4rem;
+}   
+
+.header .row .tooltipped {
+    font-size: 12px;
+    visibility: hidden;
+    width: 120px;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    /* margin-top: 10; */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .header .row:hover .tooltipped {
+    visibility: visible;
+  }

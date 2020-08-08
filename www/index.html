@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<title>Widget</title>
+
+<body>
+  <script data-main="vutura-require" src="js/lib/require.js"></script>
+  <script>
+    require(['vutura-require'], function () {
+      require(['app/script'], function () { })
+    });
+  </script>
+  <div id="testing">
+  </div>
+  <div class="badges-nontification"></div>
+  <div id="myBtn">
+    <img src="https://i.ibb.co/9H0xs0T/m-vutura-logo.png" alt="m-vutura-logo" id="widget">
+  </div>
+  <div id="myModal">
+    <div id="modalimage">
+      <div class="contentimage">
+        <div class="header-image">
+          <div class="row">
+            <div class="col s10 title" style="margin-top: 5px;">Preview</div>
+            <div class="col s2">
+              <span class="close-image tooltipped" data-position="bottom" data-tooltip="Tutup?">&times;</span>
+            </div>
+          </div>
+        </div>
+        <div class="preview">
+          <div id="box">
+            <img src="" alt="image preview" class="image-preview__image">
+          </div>
+        </div>
+        <div class="progress loadingImage">
+          <div class="determinate ImageDeterminate"></div>
+        </div>
+        <div id="caption">
+          <input type="text" name="text-caption" id="text-caption" placeholder="Add Caption">
+        </div>
+        <div class="send">
+          <span class="material-icons tooltipped" id="sendimage" data-position="top" data-tooltip="Kirim?">send</span>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="header">
+      <div class="row">
+        <img src="https://i.ibb.co/JzW7xxC/bintik.png" alt="bintik" id="bintik">
+        <span  class="tooltipped">Minimize</span>
+      </div>
+      <div class="row baris2">
+        <div class="col">
+          <span class="title">
+            <img src="https://i.ibb.co/SJjtVM1/vutura-logo.png" alt="vutura-logo" id="ava">
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="progress loadingFile">
+      <div class="determinate fileDeterminate"></div>
+    </div>
+    <div class="modal-content-login">
+      <div class="content-login">
+        <div class="header-login">
+          <div class="myLogin">
+            <div class="row">
+              <div class="col s12 center-align" style="font-family: poppins; font-size: 15px; padding-top: 10px;">
+                Selamat Datang!
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 center-align" style="font-family: poppins; font-size: 13px; padding-top: 10px;">
+                Nama Kamu Siapa?
+              </div>
+            </div>
+            <div class="row content-isi">
+              <div class="col s12">
+                <input type="text" class="validate" name="nama" id="nama" style="text-align:center;" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <small id="warn1"></small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 center-align" style="font-family: poppins; font-size: 13px; padding-top: 10px;">
+                Email kamu apa?
+              </div>
+            </div>
+            <div class="row content-isi">
+              <div class="col s12">
+                <input type="email" class="validate" name="email" id="email" style="text-align:center;" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <small id="warn2"></small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <a class="waves-effect waves-light btn orange" id="submitlogin">Mulai</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-content">
+      
+      <div class="container-fluid">
+        <div id="firsttgl"></div>
+        <div id="console-admin">
+
+        </div>
+        <div id="console">
+        </div>
+      </div>
+    </div>
+    <div class="message">
+      <div id="abs">
+        <div class="row valign-wrapper messagebox ">
+          <div class="col s1 fl1">
+            <label class="mdl-button mdl-js-button mdl-button--icon mdl-button--file">
+              <i class="material-icons" id="in_image">image</i><input type="file" name="file" id="file" accept="image/*"
+                placeholder="test" >
+            </label>
+          </div>
+          <div class="col s1 fl2">
+            <label class="mdl-button mdl-js-button mdl-button--icon mdl-button--file">
+              <i class="material-icons" id="in_image_file">attach_file</i><input type="file" name="fileDoc" id="fileDoc" accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/pdf"
+                placeholder="test" >
+            </label>
+          </div>
+          <div class="col s8 fl3">
+            <textarea name="pesan" id="textarea1" class="materialize-textarea"
+              placeholder="Masukkan Pesan..."></textarea>
+          </div>
+          <div class="col s2 fl4" id="iconsend">
+            <span class="material-icons " id="sendmes">send</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
